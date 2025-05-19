@@ -32,5 +32,6 @@ frontend/
 └─ vite.config.js          # Vite 설정
 ```
 
-![물어멘토_logo](https://github.com/user-attachments/assets/45e009c8-5266-4af1-a473-b464716b2822)
+![logo](https://github.com/user-attachments/assets/a77580c7-c901-423b-aa8f-062063ba06f8)
+
 
