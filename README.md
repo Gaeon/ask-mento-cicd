@@ -1,6 +1,6 @@
-# 🖥️ Vue 3 Frontend for AISM Monitoring
+# 🖥️ Vue 3 Frontend for 물어멘토
 
-이 저장소는 AISM 모니터링 솔루션의 **프론트엔드(Vue 3 + Vite 기반)** 코드만 분리하여 관리하는 레포지토리입니다.  
+이 저장소는 물어멘토 서비스의 **프론트엔드(Vue 3 + Vite 기반)** 코드만 분리하여 관리하는 레포지토리입니다.  
 CI/CD 자동화를 위해 Jenkins 빌드 대상으로 구성되었습니다.
 
 ## 🛠️ 기술 스택
@@ -31,3 +31,6 @@ frontend/
 │  └─ main.js              # 진입점
 └─ vite.config.js          # Vite 설정
 ```
+
+![물어멘토_logo](https://github.com/user-attachments/assets/45e009c8-5266-4af1-a473-b464716b2822)
+
