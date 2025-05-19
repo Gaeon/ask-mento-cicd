@@ -1,64 +1,33 @@
-# Vue 3 + Vite
+# 🖥️ Vue 3 Frontend for AISM Monitoring
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+이 저장소는 AISM 모니터링 솔루션의 **프론트엔드(Vue 3 + Vite 기반)** 코드만 분리하여 관리하는 레포지토리입니다.  
+CI/CD 자동화를 위해 Jenkins 빌드 대상으로 구성되었습니다.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## 🛠️ 기술 스택
+
+- **Vue 3** (`<script setup>` SFC 기반)
+- **Vite**
+- **Vue Router**
+- **Axios** (API 연동)
+- **Docker**
+- **Kubernetes YAML (deploy/service/cm 포함)**
+
+---
+
+## 📂 프로젝트 구조
 
 ```
-frontend
-├─ Dockerfile
-├─ README.md
-├─ default.conf
-├─ env.properties
-├─ index.html
-├─ k8s
-│  ├─ cm-auto-ingress-tls.yaml
-│  ├─ deploy.t
-│  ├─ deploy.yaml
-│  ├─ service.t
-│  └─ service.yaml
-├─ package-lock.json
-├─ package.json
-├─ public
-│  ├─ index.html
-│  └─ vite.svg
-├─ src
-│  ├─ App.vue
-│  ├─ assets
-│  │  ├─ logo-main.png
-│  │  ├─ logo.png
-│  │  ├─ vue.svg
-│  │  └─ 학사모.png
-│  ├─ components
-│  │  ├─ HelloWorld.vue
-│  │  ├─ history
-│  │  │  ├─ AnswersList.vue
-│  │  │  └─ QuestionsList.vue
-│  │  └─ questions
-│  │     └─ SimilarQuestions.vue
-│  ├─ layouts
-│  │  └─ MainLayout.vue
-│  ├─ main.js
-│  ├─ pages
-│  │  ├─ HistoryPage.vue
-│  │  ├─ HomePage.vue
-│  │  ├─ LoginPage.vue
-│  │  ├─ MyPage.vue
-│  │  ├─ PostQuestionPage.vue
-│  │  ├─ QuestionsPage.vue
-│  │  ├─ SelectMentorPage.vue
-│  │  ├─ SimilarQuestionsPage.vue
-│  │  ├─ SubmissionConfirmationPage.vue
-│  │  └─ SubmitQuestionPage.vue
-│  ├─ plugins
-│  │  └─ axios.js
-│  ├─ router
-│  │  └─ index.js
-│  ├─ services
-│  │  └─ app.js
-│  ├─ stores
-│  │  └─ auth.js
-│  └─ style.css
-└─ vite.config.js
-
+frontend/
+├─ Dockerfile              # 프론트엔드 컨테이너 빌드 설정
+├─ default.conf            # Nginx 설정 (optional)
+├─ k8s/                    # Kubernetes 배포 YAML
+├─ public/                 # 정적 파일
+├─ src/                    # Vue 3 소스 코드
+│  ├─ components/          # 공통 컴포넌트
+│  ├─ layouts/             # 레이아웃 구성
+│  ├─ pages/               # 각 라우트별 페이지
+│  ├─ router/              # Vue Router 설정
+│  ├─ stores/              # Pinia 상태관리
+│  └─ main.js              # 진입점
+└─ vite.config.js          # Vite 설정
 ```
