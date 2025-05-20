@@ -153,7 +153,7 @@ const handleSearch = async () => {
   if (question.value.trim()) {
     loading.value = true;
     try {
-      const response = await axios.post('http://localhost:8080/api/questions/search', {
+      const response = await axios.post('/api/questions/search', {
         question: question.value
       });
       

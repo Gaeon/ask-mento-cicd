@@ -189,7 +189,7 @@ const userInfo = ref({
 const fetchUserData = async () => {
   try {
     const userData = JSON.parse(localStorage.getItem('user'))
-    const response = await axios.get(`http://localhost:8080/api/users/${userData.user_id}`)
+    const response = await axios.get(`/api/users/${userData.user_id}`)
     
     userInfo.value = {
       name: response.data.name,
@@ -286,7 +286,7 @@ const changePassword = async () => {
   loading.value = true
   try {
     const userData = JSON.parse(localStorage.getItem('user'))
-    const response = await axios.patch(`http://localhost:8080/api/users/${userData.user_id}`, {
+    const response = await axios.patch(`/api/users/${userData.user_id}`, {
       password: passwordForm.value.new
     })
     

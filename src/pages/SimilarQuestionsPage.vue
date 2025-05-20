@@ -91,7 +91,7 @@ const findMentor = async () => {
     loading.value = true;
     
     // 에이전트 API 호출
-    const response = await axios.post('http://localhost:8000/api/recommend-mentors', {
+    const response = await axios.post('/api/recommend-mentors', {
       question: currentQuestion.value
     });
     
