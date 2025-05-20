@@ -65,23 +65,70 @@ const credentials = ref({
 
 const authStore = useAuthStore()
 
+    // 🤍수정전
+    /*
 const handleLogin = async () => {
   try {
-    // 실제 요청은 생략하거나 유지할 수 있음
-    const fakeUser = {
+    const response = await axios.post('http://localhost:8080/api/login', {
+      user_id: credentials.value.username,
+      password: credentials.value.password
+    })
+    
+    if (response.data === "사용자를 찾을 수 없습니다.") {
+      alert("사용자를 찾을 수 없습니다.")
+      return
+    }
+    
+    if (response.data === "비밀번호가 일치하지 않습니다.") {
+      alert("비밀번호가 일치하지 않습니다.")
+      return
+    }
+    
+  
+    authStore.login(credentials.value)
+    router.push('/questions')
+  } catch (error) {
+    console.error("로그인 실패:", error)
+    alert("로그인 중 오류가 발생했습니다.")
+  }
+  */
+
+  // 수정후🤍
+  const handleLogin = async () => {
+  try {
+    const response = await axios.post('http://localhost:8080/api/login', {
       user_id: credentials.value.id,
-      nickname: 'admin',
-      role: 'admin'
+      password: credentials.value.password
+    });
+
+    const result = response.data;
+
+    if (result === "사용자를 찾을 수 없습니다.") {
+      alert("사용자를 찾을 수 없습니다.");
+      return;
     }
 
-    localStorage.setItem('user', JSON.stringify(fakeUser))
-    authStore.login(fakeUser)
-    router.push('/questions')
+    if (result === "비밀번호가 일치하지 않습니다.") {
+      alert("비밀번호가 일치하지 않습니다.");
+      return;
+    }
+
+    if (result.user_id) {
+      localStorage.setItem('user', JSON.stringify(result));
+      authStore.login(result);
+      router.push('/questions');
+    } else {
+      alert("응답에 사용자 정보가 없습니다.");
+    }
 
   } catch (error) {
-    console.error("로그인 실패 (이론상 안 뜸):", error)
+    console.error("로그인 실패:", error);
+    alert("로그인 중 오류가 발생했습니다.");
   }
 };
+
+
+
 </script>
 
 <style scoped>
