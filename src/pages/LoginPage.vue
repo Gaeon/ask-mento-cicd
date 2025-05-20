@@ -70,7 +70,7 @@ const authStore = useAuthStore()
     /*
 const handleLogin = async () => {
   try {
-    const response = await axios.post('https://sk031-ask-mento-be.skala25a.project.skala-ai.com/api/login', {
+    const response = await axios.post('/api/login', {
       user_id: credentials.value.username,
       password: credentials.value.password
     })
@@ -97,7 +97,7 @@ const handleLogin = async () => {
   // 수정후🤍
   const handleLogin = async () => {
   try {
-    const response = await axios.post('http://localhost:8080/api/login', {
+    const response = await axios.post('/api/login', {
       user_id: credentials.value.id,
       password: credentials.value.password
     });
