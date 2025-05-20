@@ -9,7 +9,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'http://localhost:8080',
+        target: 'https://sk031-ask-mento-be.skala25a.project.skala-ai.com',
         changeOrigin: true,
         // rewrite: (path) => path.replace(/^\/api/, '')
       }
