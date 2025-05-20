@@ -11,6 +11,8 @@ CI/CD 자동화를 위해 Jenkins 빌드 대상으로 구성되었습니다.
 - **Axios** (API 연동)
 - **Docker**
 - **Kubernetes YAML (deploy/service/cm 포함)**
+- **Jenkins**
+- **Argo CD**
 
 ---
 
