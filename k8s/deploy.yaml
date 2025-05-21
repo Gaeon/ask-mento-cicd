@@ -21,7 +21,7 @@ spec:
       serviceAccountName: default
       containers:
       - name: ask-mento
-        image: amdp-registry.skala-ai.com/skala25a/sk031-ask-mento:1.0.0-11-f3464495ac77
+        image: amdp-registry.skala-ai.com/skala25a/sk031-ask-mento:1.0.0-12-1d70eb06d5e9
         imagePullPolicy: Always
         env:
         - name: LOGGING_LEVEL
