@@ -55,7 +55,7 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '../stores/auth'
-import axios from 'axios'
+import api from '../plugins/axios'
 
 const router = useRouter()
 const showPassword = ref(false)
@@ -97,7 +97,7 @@ const handleLogin = async () => {
   // 수정후🤍
   const handleLogin = async () => {
   try {
-    const response = await axios.post('/api/login', {
+    const response = await api.post('/login', {
       user_id: credentials.value.id,
       password: credentials.value.password
     });
