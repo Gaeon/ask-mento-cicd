@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="sk031"
-IMAGE_NAME="ask-mento"
+IMAGE_NAME="ask-mento-fe"
 VERSION="1.0.0"
 
 # Docker 이미지 빌드

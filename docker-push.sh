@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NAME="sk031"
-IMAGE_NAME="ask-mento-BE"
+IMAGE_NAME="ask-mento-fe"
 VERSION="1.0.0"
 
 DOCKER_REGISTRY="amdp-registry.skala-ai.com/skala25a"

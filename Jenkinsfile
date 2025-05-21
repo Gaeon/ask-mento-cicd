@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     environment {
-        GIT_URL = 'https://github.com/Gaeon/ask-mento-cicd'
+        GIT_URL = 'https://github.com/Gaeon/ask-mento-fe-cicd'
         GIT_BRANCH = 'main' // 또는 master
         GIT_ID = 'skala-github-id' // GitHub PAT credential ID
         GIT_USER_NAME = 'Gaeon' // GitHub 사용자 이름
         GIT_USER_EMAIL = 'gaeon0413@gmail.com'
         IMAGE_REGISTRY = 'amdp-registry.skala-ai.com/skala25a'
-        IMAGE_NAME = 'sk031-ask-mento'
+        IMAGE_NAME = 'sk031-ask-mento-fe'
         IMAGE_TAG = '1.0.0'
         DOCKER_CREDENTIAL_ID = 'skala-image-registry-id'  // Harbor 인증 정보 ID
     }
