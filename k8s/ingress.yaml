@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sk031-ask-mento-fe
+  namespace: skala-practice
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  ingressClassName: public-nginx
+  rules:
+  - host: sk031-ask-mento-fe.skala25a.project.skala-ai.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: sk031-ask-mento-fe
+            port:
+              number: 8080
+  tls:
+  - hosts:
+    - sk031-ask-mento-fe.skala25a.project.skala-ai.com
+    secretName: sk031-cm-auto-tls-secret
